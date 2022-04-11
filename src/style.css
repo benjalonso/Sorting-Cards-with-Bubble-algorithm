@@ -1,1 +1,49 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+body {
+  font-family: "Caveat", cursive;
+  font-family: "Indie Flower", cursive;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Nanum Myeongjo", serif;
+  font-family: "Sriracha", cursive;
+}
+#button {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 50px;
+  height: 40px;
+  width: 120px;
+  font-size: 17px;
+  background: red;
+}
+#card {
+  height: 115px;
+  width: 80px;
+  border-radius: 10px;
+  font-size: 30px;
+  font-weight: 10px;
+  box-shadow: 5px 2px 2px rgba(0, 0, 0, 0.733);
+  margin: auto;
+  margin-top: 70px;
+}
+#numeroDeCarta {
+  font-size: 30px;
+  font-weight: 10px;
+}
+#pinta1 {
+  color: red;
+}
+#pinta2 {
+  color: red;
+  transform: rotate(180deg);
+}
+#draw {
+  width: 80px;
+  background-color: rgb(189, 29, 29);
+}
+#sort {
+  width: 80px;
+  background-color: rgb(189, 29, 29);
+}

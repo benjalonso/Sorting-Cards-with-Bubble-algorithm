@@ -3,27 +3,62 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
+    <title>Sorting Cards Machine</title>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
       integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
       crossorigin="anonymous"
     />
-    <link rel="shortcut icon" href="./4geeks.ico" />
   </head>
-  <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+  <body class="bg-success">
+    <div class="container-fluid">
+      <div class="row ">
+        <h1 class="col-2 ">Original:</h1>
+        <input
+          type="number"
+          class="form-control col-2 w-25 h-100 my-auto me-1 "
+          id="numberOfCards"
+        />
+        <button
+          class="btn btn-primary col-2 h-25 my-auto me-1"
+          type="submit"
+          id="draw"
+        >
+          Draw
+        </button>
+        <button
+          class="btn btn-primary col-2 h-25 my-auto"
+          type="submit"
+          id="sort"
+        >
+          Sort
+        </button>
       </div>
     </div>
+    <div class="container-fluid" id="contenedorDeCartas">
+      <div id="card" class="bg-white row position-relative">
+        <span class="col-12 px-25 position-absolute top-0 start-0" id="pinta1"
+          >♥</span
+        >
+        <p
+          class="text-center col-12 mb-0 position-absolute top-50 start-50 translate-middle"
+          id="numeroDeCarta"
+        >
+          3
+        </p>
+        <span
+          class="col-12 px-25 h-25 position-absolute bottom-0 end-0"
+          id="pinta2"
+          >♥</span
+        >
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

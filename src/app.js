@@ -9,9 +9,9 @@ window.onload = function() {
   let contenedorDeCartas2 = document.getElementById("contenedorDeCartas2");
   let numberOfCards = document.getElementById("numberOfCards");
   let arrayOfCards = [];
-  // { pinta: "♣", numero: "A" }
   let pintas = ["♦", "♥", "♠", "♣"];
-  let numeros = ["A", 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"];
+  let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+  let numeros2 = ["A", 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"];
 
   let newCard = valor => {
     for (let i = 0; i < valor; i++) {
@@ -30,13 +30,14 @@ window.onload = function() {
       card.appendChild(pinta1);
       card.appendChild(cardNumber);
       card.appendChild(pinta2);
+
       contenedorDeCartas.appendChild(card);
       //EL codigo de abajo hace la carta aleatoria
       let pintaAleatoria = Math.floor(Math.random() * pintas.length);
       pinta1.innerHTML = pintas[pintaAleatoria];
       pinta2.innerHTML = pintas[pintaAleatoria];
       let numeroAleatorio = Math.floor(Math.random() * numeros.length);
-      cardNumber.innerHTML = numeros[numeroAleatorio];
+      cardNumber.innerHTML = numeros2[numeroAleatorio];
       if (pintas[pintaAleatoria] == "♠") {
         pinta1.style.color = "black";
         pinta2.style.color = "black";
@@ -48,6 +49,7 @@ window.onload = function() {
         pinta2.style.color = "red";
       }
 
+      // Este objeto me almacena los valores relevantes de la carta
       arrayOfCards.push({
         pinta: pintas[pintaAleatoria],
         numero: numeros[numeroAleatorio]
@@ -77,10 +79,6 @@ window.onload = function() {
       card.appendChild(pinta1);
       card.appendChild(cardNumber);
       card.appendChild(pinta2);
-      if (valor[i].numero == "A") valor[i].numero = 1;
-      if (valor[i].numero == "J") valor[i].numero = 11;
-      if (valor[i].numero == "Q") valor[i].numero = 12;
-      if (valor[i].numero == "K") valor[i].numero = 13;
 
       containerForEachGroupOfCards.appendChild(card);
 
@@ -88,6 +86,7 @@ window.onload = function() {
       pinta1.innerHTML = valor[i].pinta;
       pinta2.innerHTML = valor[i].pinta;
       cardNumber.innerHTML = valor[i].numero;
+
       if (valor[i].pinta == "♠") {
         pinta1.style.color = "black";
         pinta2.style.color = "black";
@@ -98,8 +97,9 @@ window.onload = function() {
         pinta1.style.color = "red";
         pinta2.style.color = "red";
       }
+
+      contenedorDeCartas2.appendChild(containerForEachGroupOfCards);
     }
-    contenedorDeCartas2.appendChild(containerForEachGroupOfCards);
   };
 
   const bubbleSort = arr => {

@@ -48,13 +48,11 @@ window.onload = function() {
         pinta1.style.color = "red";
         pinta2.style.color = "red";
       }
-
       // Este objeto me almacena los valores relevantes de la carta
       arrayOfCards.push({
         pinta: pintas[pintaAleatoria],
         numero: numeros[numeroAleatorio]
       });
-      console.log(arrayOfCards);
     }
   };
 
@@ -83,6 +81,18 @@ window.onload = function() {
       containerForEachGroupOfCards.appendChild(card);
 
       //EL codigo de abajo asigna los valores de DRAW a las nuevas cartas
+      if (valor[i].numero == 1) {
+        valor[i].numero = "A";
+      }
+      if (valor[i].numero == 11) {
+        valor[i].numero = "J";
+      }
+      if (valor[i].numero == 12) {
+        valor[i].numero = "Q";
+      }
+      if (valor[i].numero == 13) {
+        valor[i].numero = "K";
+      }
       pinta1.innerHTML = valor[i].pinta;
       pinta2.innerHTML = valor[i].pinta;
       cardNumber.innerHTML = valor[i].numero;

@@ -97,6 +97,19 @@ window.onload = function() {
       pinta2.innerHTML = valor[i].pinta;
       cardNumber.innerHTML = valor[i].numero;
 
+      if (valor[i].numero == "A") {
+        valor[i].numero = 1;
+      }
+      if (valor[i].numero == "J") {
+        valor[i].numero = 11;
+      }
+      if (valor[i].numero == "Q") {
+        valor[i].numero = 12;
+      }
+      if (valor[i].numero == "K") {
+        valor[i].numero = 13;
+      }
+
       if (valor[i].pinta == "♠") {
         pinta1.style.color = "black";
         pinta2.style.color = "black";
